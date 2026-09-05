@@ -1,7 +1,7 @@
 # 🏆 Vriddhi 2026 — NIT Rourkela Annual Sports Fest
 
 <p align="center">
-  <strong>Official Website Experience for Vriddhi — NIT Rourkela's Annual Sports Festival</strong>
+  <strong>Official Website Experience for Vriddhi 2026 — NIT Rourkela's Flagship Annual Sports Festival</strong>
 </p>
 
 <p align="center">
@@ -12,39 +12,45 @@
 
 ---
 
-## 📌 About
+## 📌 About Vriddhi
 
-**Vriddhi** is the annual sports festival of **NIT Rourkela**, bringing together athletes and sports enthusiasts for a celebration of competition, teamwork, and sportsmanship.
+**Vriddhi** is the premier annual sports festival of **National Institute of Technology Rourkela (NIT Rourkela)**, organized under the aegis of the **Student Activity Centre (SAC)**. 
 
-This project recreates the public-facing Vriddhi 2026 web experience with a modern, responsive interface designed to provide visitors with information about the fest, registration, highlights, FAQs, and contact details.
+Bringing together over **1,500 collegiate athletes, gamers, and strategists from 80+ universities across India**, Vriddhi celebrates athletic excellence, teamwork, passion, and tactical mastery across 3 non-stop days of championship competition.
 
-🔗 **Live Website:** https://www.vriddhi.co/
+🔗 **Live Website:** [https://www.vriddhi.co/](https://www.vriddhi.co/)
 
 ---
 
-## ✨ Features
+## ✨ Features & Architecture
 
-* 🎨 Modern dark-themed sports festival UI
-* 📱 Fully responsive design
-* 🏆 Sports-fest focused landing page
-* 📅 Event and festival information
-* 📝 Registration call-to-action
-* ❓ Interactive FAQ section
-* 📍 Location and contact information
-* ⚡ Fast Vite-powered development environment
-* 🧩 Component-based React architecture
+* 🎨 **Anime-Sports Aesthetic**: High-energy cyberpunk and dark manga visual theme with glow accents, cyber-gradients, and custom typography (`Bangers`, `Russo One`, `Inter`, `Rajdhani`).
+* 📱 **Fully Responsive UI**: Fluid layout adapting across mobile screens, tablets, and ultra-wide desktop monitors with slide-out drawer menus.
+* 🏆 **12-Event Tournament Arena**:
+  * **Esports**: Battle Royale Showdown in **BGMI** & **Free Fire**.
+  * **Outdoor Stadium Sports**: **Football (11v11)**, **Cricket (T20 Leather Ball)**, **Basketball (FIBA)**, **Volleyball**, **Kabaddi**, and **Kho Kho**.
+  * **Indoor & Mind Games**: **Badminton**, **Table Tennis**, **Chess (FIDE Rapid)**, and **Yoga**.
+* 📜 **Interactive Rulebook Modals**: Complete official tournament rules, squad sizes, match formats, and venue guidelines for every sport.
+* 📝 **Team Registration Portal**:
+  * Full non-NITR contingent entry form.
+  * Fields for Team Name, Sport selection, College name, Captain credentials, Squad size, Gender category, and Student ID card proof.
+  * Live validation, dynamic fee computation, celebratory confetti effects, and toast alert confirmations.
+* 📅 **3-Day Match Timeline & Schedule**: Interactive Day 1, Day 2, and Day 3 fixture schedule with venues, time slots, and event categories.
+* 📸 **Filterable Photo Gallery & Lightbox**: High-resolution action photography across Sports, Esports, Ceremonies, and Crowd moments.
+* 👥 **Organizing Committee Directory**: Direct contact links for SAC leadership, Convenors (Jana Chandrashekhar & Tangudu Adarsa), and the 3D Technical Team.
+* ❓ **Comprehensive FAQ Accordion**: Clear answers on tournament rules, team eligibility, hostel accommodation, and match logistics.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology       | Purpose                                  |
-| ---------------- | ---------------------------------------- |
-| **React**        | Frontend UI development                  |
-| **Vite**         | Development and production build tooling |
-| **JavaScript**   | Application logic                        |
-| **CSS**          | Styling and responsive design            |
-| **Lucide React** | UI icons                                 |
+| Technology | Purpose |
+| --- | --- |
+| **React 19** | Component-based modern UI library |
+| **Vite 7** | Next-generation fast frontend tooling |
+| **Vanilla CSS Design System** | Custom cyberpunk/anime sports styling and glow tokens |
+| **Lucide React** | Modern iconography set |
+| **Canvas Confetti** | Celebration visual particle physics |
 
 ---
 
@@ -53,116 +59,63 @@ This project recreates the public-facing Vriddhi 2026 web experience with a mode
 ```text
 vriddhi-sports-fests/
 │
-├── public/
-│
 ├── src/
-│   ├── main.jsx
-│   └── styles.css
+│   ├── components/
+│   │   ├── Navbar.jsx           # Fixed navigation & mobile drawer
+│   │   ├── Hero.jsx             # Hero banner with stats bar
+│   │   ├── AboutSection.jsx     # Overview & 3 core pillars
+│   │   ├── SportsSection.jsx    # 12-sport catalog with category filter
+│   │   ├── SportRuleModal.jsx   # Rulebook & guidelines popup
+│   │   ├── RegisterModal.jsx    # Team registration form with validation
+│   │   ├── ScheduleSection.jsx  # Day 1-3 interactive timeline
+│   │   ├── GallerySection.jsx   # Photo gallery with lightbox
+│   │   ├── TeamSection.jsx      # Committee & convenors directory
+│   │   ├── FAQSection.jsx       # Accordion FAQ answers
+│   │   ├── Footer.jsx           # NIT Rourkela info & contacts
+│   │   └── Toast.jsx            # Floating notification alerts
+│   │
+│   ├── data/
+│   │   ├── sportsData.js        # 12-sport rules, fees, and parameters
+│   │   └── festivalData.js      # Schedule, gallery, committee & FAQs
+│   │
+│   ├── main.jsx                 # Main application state orchestration
+│   └── styles.css               # Design system & CSS custom properties
 │
-├── index.html
-├── package.json
-├── README.md
-└── .gitignore
+├── index.html                   # HTML template with Google Fonts & SEO
+├── package.json                 # Dependencies & scripts
+└── README.md                    # Project documentation
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Charitasreee/vriddhi-sports-fests.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd vriddhi-sports-fests
-```
-
-### 3. Install dependencies
-
+### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### 4. Start the development server
-
+### 2. Start the development server
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed by Vite in your browser.
-
----
-
-## 🏗️ Build for Production
-
+### 3. Build for production
 ```bash
 npm run build
 ```
 
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-
 ---
 
-## 🌐 Live Website
-
-<p align="center">
-
-### [🚀 Visit Vriddhi 2026 →](https://www.vriddhi.co/)
-
-</p>
-
----
-
-## 📸 Website
-
-The website is designed around the visual identity of Vriddhi, using a dark sports-themed interface with bold typography, vibrant red accents, interactive sections, and responsive layouts.
-
----
-
-## 🎯 Project Goals
-
-The project focuses on:
-
-* Creating a visually engaging sports-festival website
-* Building a responsive user experience across devices
-* Structuring the application using reusable frontend components
-* Maintaining a clean and scalable project structure
-* Providing clear information and navigation for participants and visitors
-
----
-
-## 📍 Vriddhi
-
-**National Institute of Technology Rourkela**
-Rourkela, Odisha, India
-
-🌐 Website: https://www.vriddhi.co/
-
----
-
-## 👩‍💻 Developer
-
-**Charitasreee**
-
-GitHub:
-https://github.com/Charitasreee
-
----
-
-## 📄 License
-
-This project is intended for educational and portfolio purposes.
+## 📍 National Institute of Technology Rourkela
+**Student Activity Centre (SAC)**  
+Sector 1, Rourkela, Odisha, India - 769008  
+📧 Email: nitrkl.vriddhi@gmail.com  
+📱 Convenors: Jana Chandrashekhar (9110570159) • Tangudu Adarsa (7735656041)  
+📸 Instagram: [@vriddhi_nitr](https://instagram.com/vriddhi_nitr)
 
 ---
 
 <p align="center">
-  Built with ❤️ for <strong>Vriddhi 2026</strong> • NIT Rourkela
+  Built with ❤️ by the <strong>3D Team</strong> for <strong>Vriddhi 2026</strong> • NIT Rourkela
 </p>
